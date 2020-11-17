@@ -5,8 +5,8 @@
 	box-sizing: border-box;
 	
 }
-body{
-	background-color: rgba(10, 45, 100, 0.1);
+body {
+	background-color: hsl(180, 71%, 89%);
 }
 html {
 	font-size: 10px;
@@ -29,21 +29,22 @@ img {
 	object-fit: cover;
 }
 p {
-	color: black;
-	font-size: 1.4rem;
+	color:rgb(92, 202, 221);
+	font-size: 1.6rem;
 	margin-top: 5px;
 	line-height: 2.5rem;
-	font-weight: 300;
+	font-weight: 600;
 	letter-spacing: .05rem;
 }
 .section-title {
 	font-size: 4rem;
-	font-weight: 300;
-	color: black;
+	font-weight: 1200;
+	color:whitesmoke;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 	letter-spacing: .2rem;
 	text-align: center;
+	
 }
 .section-title span {
 	color: crimson;
@@ -277,6 +278,10 @@ p {
 	max-width: 1500px;
 	margin: 0 auto;
 	padding: 100px 0;
+	background: linear-gradient(-80deg, #ca541d, #9e4768, #2d6847, #181f64);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	
 }
 #education .service-top {
 	max-width: 500px;
@@ -288,6 +293,7 @@ p {
 	justify-content: center;
 	flex-wrap: wrap;
 	margin-top: 50px;
+	
 }
 #education .service-item {
 	flex-basis: 80%;
@@ -334,6 +340,7 @@ p {
 /* End education Section */
 
 /* Projects section */
+
 #projects .projects {
 	flex-direction: column;
 	max-width: 1200px;
@@ -407,10 +414,18 @@ p {
 /* End Projects section */
 
 /* Acievements*/
+#achievement
+{
+	background-image: url(./img/project.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 40px;
+}
 #achievement .achievement {
 	flex-direction: column;
 	max-width: 1200px;
 	margin: 0 auto;
+	
 }
 #achievement .achievement-items {
 	width: 400px;
@@ -426,11 +441,12 @@ p {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	box-shadow: 0px 0px 18px 0 #0000002c;
+	box-shadow: 0px 0px 68px 0 #0000002c;
 	transition: .3s ease box-shadow;
+	background-color: whitesmoke;
 }
 #achievement .achievement-item:hover {
-	box-shadow: 0px 0px 5px 0 #0000002c;
+	box-shadow: 0px 0px 10px 0 #0000002c;
 }
 #achievement .icon {
 	width: 70px;
@@ -445,17 +461,33 @@ p {
 #achievement .achievement-info h2 {
 	font-size: 1.3rem;
 	line-height: 2rem;
-	font-weight: 500;
+	font-weight: 600;
 }
 /* Achievements End*/
 
 /* About Section */
+#about
+{
+	background-image: url(./img/about.png);
+	background-size: cover;
+}
+#about .about_box{
+	color: rgb(50, 170, 150);
+	padding-left: 340px;
+	
+}
+#about .section-title
+{
+	color: rgb(50, 170, 150);
+}
 #about .about {
 	flex-direction: column-reverse;
 	text-align: center;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 100px 20px;
+	padding: 20px 0px 180px 0px;
+	color:crimson;
+	
 }
 #about .col-left {
 	width: 250px;
@@ -484,6 +516,8 @@ p {
 	width: 100%;
 	position: relative;
 	border: 10px solid white;
+	z-index: 1;
+	
 }
 #about .col-left .about-img::after {
 	content: '';
@@ -498,6 +532,12 @@ p {
 /* End About Section */
 
 /* contact Section */
+#contact
+{
+	background: linear-gradient(-90deg, #bd431e, #99307f, #6dc552, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
 #contact .contact {
 	flex-direction: column;
 	max-width: 1200px;
@@ -519,6 +559,7 @@ p {
 	flex-direction: column;
 	box-shadow: 0px 0px 18px 0 #0000002c;
 	transition: .3s ease box-shadow;
+	background-color: white;
 }
 #contact .contact-item:hover {
 	box-shadow: 0px 0px 5px 0 #0000002c;
@@ -749,3 +790,62 @@ p {
 	}
 }
 /* End  Media Query For Desktop */
+
+.scroll-down {
+	height: 50px;
+	width: 30px;
+	border: 2px solid rgb(40, 144, 170);
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	border-radius: 50px;
+	cursor: pointer;
+  }
+  .scroll-down::before,
+  .scroll-down::after {
+	content: "";
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	height: 10px;
+	width: 10px;
+	transform: translate(-50%, -100%) rotate(45deg);
+	border: 2px solid rgb(88, 195, 209);
+	border-top: transparent;
+	border-left: transparent;
+	animation: scroll-down 1s ease-in-out infinite;
+  }
+  .scroll-down::before {
+	top: 30%;
+	animation-delay: 0.3s;
+	/* animation: scroll-down 1s ease-in-out infinite; */
+  }
+  
+  @keyframes scroll-down {
+	0% {
+	  /* top:20%; */
+	  opacity: 0;
+	}
+	30% {
+	  opacity: 1;
+	}
+	60% {
+	  opacity: 1;
+	}
+	100% {
+	  top: 90%;
+	  opacity: 0;
+	}
+  }
+  /*body background*/
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
