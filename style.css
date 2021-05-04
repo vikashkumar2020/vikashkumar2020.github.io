@@ -6,7 +6,7 @@
 	
 }
 body {
-	background-color: hsl(180, 71%, 89%);
+	background-color: hsl(180, 100%, 1%);
 }
 html {
 	font-size: 10px;
@@ -147,7 +147,9 @@ p {
 	letter-spacing: initial;
 }
 #header .nav-list ul li:hover a {
-	color: crimson;
+	color: rgb(93, 228, 233);
+	
+	border-bottom: 2px solid rgb(54, 93, 129);
 }
 #header .hamburger {
 	height: 60px;
@@ -278,9 +280,9 @@ p {
 	max-width: 1500px;
 	margin: 0 auto;
 	padding: 100px 0;
-	background: linear-gradient(-80deg, #ca541d, #9e4768, #2d6847, #181f64);
+	background: linear-gradient(-70deg, #083019, #181f64,black);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	animation: gradient 5s ease infinite;
 	
 }
 #education .service-top {
@@ -293,11 +295,13 @@ p {
 	justify-content: center;
 	flex-wrap: wrap;
 	margin-top: 50px;
-	
+	width: 100%;
 }
 #education .service-item {
 	flex-basis: 80%;
 	display: flex;
+	width:360px;
+	height:360px;
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
@@ -328,7 +332,7 @@ p {
 	margin-bottom: 20px;
 }
 #education .service-item h2 {
-	font-size: 2rem;
+	font-size: 1rem;
 	color: white;
 	margin-bottom: 10px;
 	text-transform: uppercase;
@@ -416,26 +420,30 @@ p {
 /* Acievements*/
 #achievement
 {
-	background-image: url(./img/project.jpg);
-	background-size: cover;
+	background: url(./img/project.jpg) no-repeat center center fixed;
+	background-size:cover;
 	background-repeat: no-repeat;
 	padding-top: 40px;
+	
 }
 #achievement .achievement {
 	flex-direction: column;
-	max-width: 1200px;
+	max-width: 1500px;
 	margin: 0 auto;
 	
 }
 #achievement .achievement-items {
-	width: 400px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 #achievement .achievement-item {
-	width: 80%;
-	padding: 20px;
+	height: 360px;
+	width: 360px;
+	padding: 10px;
 	text-align: center;
 	border-radius: 10px;
-	padding: 30px;
 	margin: 30px;
 	display: flex;
 	justify-content: center;
@@ -468,12 +476,12 @@ p {
 /* About Section */
 #about
 {
-	background-image: url(./img/about.png);
+	background: url(./img/about.png) no-repeat center center;
 	background-size: cover;
 }
 #about .about_box{
 	color: rgb(50, 170, 150);
-	padding-left: 340px;
+
 	
 }
 #about .section-title
@@ -534,9 +542,9 @@ p {
 /* contact Section */
 #contact
 {
-	background: linear-gradient(-90deg, #bd431e, #99307f, #6dc552, #23d5ab);
+	background: linear-gradient(-70deg, #083019, #181f64,black);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	animation: gradient 5s ease infinite;
 }
 #contact .contact {
 	flex-direction: column;
@@ -544,7 +552,7 @@ p {
 	margin: 0 auto;
 }
 #contact .contact-items {
-	width: 400px;
+	width: 360px;
 }
 #contact .contact-item {
 	width: 80%;
@@ -686,7 +694,7 @@ p {
 		flex-direction: row-reverse;
 	}
 	#projects .project-item {
-		height: 400px;
+		height: 360px;
 		margin: 0;
 		width: 100%;
 		border-radius: 0;
@@ -703,9 +711,10 @@ p {
 	#about .about {
 		flex-direction: row;
 	}
+
 	#about .col-left {
 		width: 600px;
-		height: 400px;
+		height: 360px;
 		padding-left: 60px;
 	}
 	#about .about .col-left .about-img::after {
@@ -787,6 +796,10 @@ p {
 	#education .service-bottom .service-item {
 		flex-basis: 22%;
 		margin: 1.5%;
+	}
+	#about .about_box
+	{
+		padding-left: 340px;
 	}
 }
 /* End  Media Query For Desktop */
