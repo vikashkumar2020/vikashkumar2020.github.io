@@ -277,7 +277,7 @@ p {
 #education .education {
 	flex-direction: column;
 	text-align: center;
-	max-width: 1500px;
+	max-width: 2100px;
 	margin: 0 auto;
 	padding: 100px 0;
 	background: linear-gradient(-70deg, #083019, #181f64,black);

@@ -23,3 +23,51 @@ menu_item.forEach((item) => {
 		mobile_menu.classList.toggle('active');
 	});
 });
+
+
+// smooth scroll
+
+var startPos=0;
+
+var finishPos;
+
+var navItemAttr = document.getElementsByClassName('nav-item');
+
+console.log(navItemAttr);
+
+for(let i of navItemAttr)
+{
+	i.addEventListener('click', function(e)
+	{
+		e.preventDefault();
+		var targetName = this.getAttribute('data-after');
+
+		var targetArea = document.getElementById(targetName);
+		//console.log(targetArea);
+		var cord = targetArea.getBoundingClientRect();
+		var finalCord = cord.top;
+		var interval = setInterval(function(){
+			cord = targetArea.getBoundingClientRect();
+			console.log(cord.top);
+			if(finalCord>0)
+			{
+
+			if(cord.top<=0)
+			{
+				clearInterval(interval)
+				return;
+			}
+			window.scrollBy(0,50);
+		}
+		else
+		{
+			if(cord.top>=0)
+			{
+				clearInterval(interval)
+				return;
+			}
+			window.scrollBy(0,-50);
+		}
+		},30);
+	});
+}
