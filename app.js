@@ -57,7 +57,7 @@ for(let i of navItemAttr)
 				clearInterval(interval)
 				return;
 			}
-			window.scrollBy(0,150);
+			window.scrollBy(0,50);
 		}
 		else
 		{
@@ -66,8 +66,8 @@ for(let i of navItemAttr)
 				clearInterval(interval)
 				return;
 			}
-			window.scrollBy(0,-150);
+			window.scrollBy(0,-50);
 		}
-		},70);
+		},30);
 	});
 }
