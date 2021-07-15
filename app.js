@@ -48,7 +48,7 @@ for(let i of navItemAttr)
 		var finalCord = cord.top;
 		var interval = setInterval(function(){
 			cord = targetArea.getBoundingClientRect();
-			console.log(cord.top);
+			//console.log(cord.top);
 			if(finalCord>0)
 			{
 
@@ -57,7 +57,7 @@ for(let i of navItemAttr)
 				clearInterval(interval)
 				return;
 			}
-			window.scrollBy(0,50);
+			window.scrollBy(0,150);
 		}
 		else
 		{
@@ -66,8 +66,8 @@ for(let i of navItemAttr)
 				clearInterval(interval)
 				return;
 			}
-			window.scrollBy(0,-50);
+			window.scrollBy(0,-150);
 		}
-		},30);
+		},70);
 	});
 }

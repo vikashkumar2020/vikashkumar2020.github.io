@@ -862,3 +862,10 @@ p {
 		background-position: 0% 50%;
 	}
 }
+
+#about .skill
+{
+	background-color: red;
+	width: 100%;
+	height: 300px;
+}
